@@ -37,6 +37,36 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://www.joshuaeze.com/blog/</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/blog/strategy-in-high-constraint-environments.html</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/blog/african-entrepreneurs-real-playbook.html</loc>
+        <lastmod>2026-06-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/blog/building-on-a-visa.html</loc>
+        <lastmod>2026-05-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/blog/africas-biggest-problem-is-thinking.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.joshuaeze.com/sitemap.html</loc>
         <lastmod>2026-06-09</lastmod>
         <changefreq>monthly</changefreq>

@@ -122,7 +122,7 @@
         <div class="max-w-screen-2xl mx-auto">
             <div class="px-8 py-5 flex items-center justify-between">
                 <!-- Logo -->
-                <div class="flex items-center gap-x-3">
+                <a href="/" class="flex items-center gap-x-3">
                     <div class="w-9 h-9 rounded-2xl bg-[#c9a84c] flex items-center justify-center">
                         <span class="text-[#0a0a0a] font-bold text-2xl tracking-tighter">JE</span>
                     </div>
@@ -130,13 +130,13 @@
                         <span class="font-semibold text-2xl tracking-tighter">Joshua Eze</span>
                         <span class="ml-2 text-xs text-[#c9a84c] font-medium">@mrjoshuaeze</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-x-9 text-sm">
                     <a href="#about" class="nav-link text-[#a3a3a3] hover:text-white font-medium">About</a>
                     <a href="#pillars" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Pillars</a>
-                    <a href="#thinking" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Thinking</a>
+                    <a href="/blog/" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Blog</a>
                     <a href="#journey" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Journey</a>
                     <a href="#contact" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Contact</a>
                 </div>
@@ -168,7 +168,7 @@
         <div class="flex flex-col gap-y-1 text-lg">
             <a href="#about" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">About</a>
             <a href="#pillars" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Pillars</a>
-            <a href="#thinking" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Thinking</a>
+            <a href="/blog/" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Blog</a>
             <a href="#journey" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Journey</a>
             <a href="#contact" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Contact</a>
             
@@ -341,8 +341,8 @@
                 <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 03</span>
                 <h2 class="section-header tracking-tighter mt-2 text-white">Featured thinking</h2>
             </div>
-            <a href="https://x.com/mrjoshuaeze" target="_blank" class="mt-4 md:mt-0 inline-flex items-center text-sm font-medium text-[#a3a3a3] hover:text-white group">
-                See everything on X 
+            <a href="/blog/" class="mt-4 md:mt-0 inline-flex items-center text-sm font-medium text-[#a3a3a3] hover:text-white group">
+                View all posts
                 <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-0.5 transition"></i>
             </a>
         </div>
@@ -350,7 +350,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
             <!-- Thinking Card 1 -->
-            <div onclick="showThinkingModal(0)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <a href="/blog/strategy-in-high-constraint-environments.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">FRAMEWORK</span>
@@ -365,10 +365,10 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Execution</span>
                     </div>
                 </div>
-            </div>
+            </a>
             
             <!-- Thinking Card 2 -->
-            <div onclick="showThinkingModal(1)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <a href="/blog/african-entrepreneurs-real-playbook.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">AFRICAN CONTEXT</span>
@@ -383,10 +383,10 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Reality</span>
                     </div>
                 </div>
-            </div>
+            </a>
             
             <!-- Thinking Card 3 -->
-            <div onclick="showThinkingModal(2)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <a href="/blog/building-on-a-visa.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">PERSONAL</span>
@@ -401,10 +401,10 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Honest</span>
                     </div>
                 </div>
-            </div>
+            </a>
             
             <!-- Thinking Card 4 -->
-            <div onclick="showThinkingModal(3)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <a href="/blog/africas-biggest-problem-is-thinking.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">BIG PICTURE</span>
@@ -419,7 +419,7 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Mindset</span>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -550,47 +550,6 @@
         </div>
     </footer>
 
-    <!-- Thinking Modal -->
-    <div id="thinking-modal" onclick="hideThinkingModal()" class="hidden fixed inset-0 z-[70] bg-black/90 flex items-center justify-center p-4">
-        <div onclick="event.stopImmediatePropagation()" class="custom-modal bg-[#111] border border-white/10 w-full max-w-3xl rounded-3xl overflow-hidden">
-            
-            <div class="flex items-center justify-between px-8 py-5 border-b border-white/10">
-                <div id="modal-thinking-title" class="font-semibold text-2xl tracking-tight text-white"></div>
-                <button onclick="hideThinkingModal()" class="w-9 h-9 flex items-center justify-center text-[#a3a3a3] hover:text-white hover:bg-white/5 rounded-2xl transition-colors">
-                    <i class="fa-solid fa-times text-xl"></i>
-                </button>
-            </div>
-            
-            <div class="p-8">
-                <div id="modal-thinking-image" class="w-full h-64 rounded-2xl overflow-hidden mb-8 bg-[#0a0a0a]"></div>
-                
-                <div class="prose prose-invert max-w-none text-[#e5e5e5]">
-                    <div id="modal-thinking-description" class="text-[15px] leading-relaxed"></div>
-                </div>
-                
-                <div class="mt-8 grid md:grid-cols-2 gap-8">
-                    <div>
-                        <div class="uppercase text-xs tracking-[2px] text-[#c9a84c] mb-3">KEY TAKEAWAYS</div>
-                        <div id="modal-thinking-takeaways" class="text-sm text-[#a3a3a3] space-y-2"></div>
-                    </div>
-                    <div>
-                        <div class="uppercase text-xs tracking-[2px] text-[#c9a84c] mb-3">RELATED PILLAR</div>
-                        <div id="modal-thinking-pillar" class="font-medium text-white"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="px-8 py-6 bg-[#0a0a0a] flex items-center justify-between border-t border-white/10">
-                <div class="text-xs text-[#666]">Published on X • Full thread available</div>
-                <a href="https://x.com/mrjoshuaeze" target="_blank" 
-                   class="inline-flex items-center gap-x-2 px-5 py-2.5 text-sm font-semibold bg-white text-[#0a0a0a] rounded-3xl hover:bg-zinc-100 transition-all">
-                    <span>Read full thread on X</span>
-                    <i class="fa-brands fa-x-twitter text-xs"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <script>
         function initializeTailwind() {
             // No custom config needed — using direct hex for gold
@@ -637,85 +596,6 @@
             });
         }
         
-        const thinkingItems = [
-            {
-                id: 0,
-                title: "Strategy in High-Constraint Environments",
-                description: "Most strategy frameworks assume abundant resources, stable institutions, and predictable markets. They fail when applied in environments where capital is scarce, infrastructure is unreliable, and policy can shift overnight. This framework shows how to design strategy that actually survives real-world African conditions — starting with constraint mapping and building adaptive advantage.",
-                takeaways: [
-                    "Constraint mapping before opportunity mapping",
-                    "Build optionality into every major decision",
-                    "Design for reversibility, not just scalability",
-                    "Turn regulatory and infrastructure gaps into moats"
-                ],
-                pillar: "Business Strategy + Nigerian/African Context"
-            },
-            {
-                id: 1,
-                title: "The African Entrepreneur’s Real Playbook",
-                description: "Imported playbooks from Silicon Valley or Harvard case studies rarely survive first contact with African reality. This piece breaks down why — and offers a grounded alternative built on distribution realities, trust economics, informal networks, and capital constraints that actually exist on the ground.",
-                takeaways: [
-                    "Distribution often beats product in African markets",
-                    "Trust is the real currency — build it before you sell",
-                    "Formal vs informal economy strategies are different games",
-                    "Capital efficiency > capital raising in most cases"
-                ],
-                pillar: "Nigerian/African Context"
-            },
-            {
-                id: 2,
-                title: "What Building on a Skilled Worker Visa Actually Looks Like",
-                description: "The public narrative around moving abroad is usually either overly rosy or overly dramatic. The truth sits in the middle: real constraints on time, energy, and risk-taking that most people don’t talk about. Here’s how I’ve learned to navigate it while still building publicly and strategically.",
-                takeaways: [
-                    "Visa status changes how you allocate risk and time",
-                    "Mental load is higher than people admit",
-                    "You can still build in public — it just requires different boundaries",
-                    "Constraints can force better focus and decision-making"
-                ],
-                pillar: "Personal Journey"
-            },
-            {
-                id: 3,
-                title: "Why Africa’s Biggest Problem Isn’t Capital — It’s Thinking",
-                description: "We talk endlessly about access to capital. But the deeper issue is often how we think about problems, opportunities, and what “success” even looks like. This contrarian take argues that until we upgrade the quality of strategic thinking at individual and institutional levels, more capital won’t solve the structural challenges.",
-                takeaways: [
-                    "Imported mental models often create more problems than they solve",
-                    "Short-termism is cultural and structural — not just a funding issue",
-                    "We need more honest, context-native strategic frameworks",
-                    "Thinking quality compounds faster than capital access"
-                ],
-                pillar: "Policy & Big Thinking"
-            }
-        ];
-        
-        function showThinkingModal(index) {
-            const item = thinkingItems[index];
-            const modal = document.getElementById('thinking-modal');
-            
-            document.getElementById('modal-thinking-title').textContent = item.title;
-            document.getElementById('modal-thinking-description').innerHTML = item.description;
-            
-            const takeawaysContainer = document.getElementById('modal-thinking-takeaways');
-            takeawaysContainer.innerHTML = item.takeaways.map(t => 
-                `<div class="flex items-start gap-x-2"><span class="text-[#c9a84c] mt-1">→</span> <span>${t}</span></div>`
-            ).join('');
-            
-            document.getElementById('modal-thinking-pillar').innerHTML = item.pillar;
-            
-            // Simple placeholder image
-            const imageContainer = document.getElementById('modal-thinking-image');
-            imageContainer.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center"><div class="text-center"><div class="text-[#c9a84c] text-sm tracking-widest mb-1">JOSHUA EZE</div><div class="text-white text-lg font-medium">Strategic Thinking</div></div></div>`;
-            
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function hideThinkingModal() {
-            const modal = document.getElementById('thinking-modal');
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-        
         function handleFormSubmit(e) {
             e.preventDefault();
             
@@ -758,23 +638,11 @@
             });
         }
         
-        function setupKeyboardControls() {
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    const modal = document.getElementById('thinking-modal');
-                    if (modal.style.display === 'flex') {
-                        hideThinkingModal();
-                    }
-                }
-            });
-        }
-        
         function initializeWebsite() {
             initializeTailwind();
             setupMobileMenu();
             setupSmoothScroll();
             setupScrollAnimations();
-            setupKeyboardControls();
             
             // Active nav on scroll
             const navLinks = document.querySelectorAll('nav a[href^="#"]');
