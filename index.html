@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Joshua Eze — MBA-qualified business strategist helping Africans think bigger about business, money, and building from nothing. Honest. Direct. Practical.">
+    <meta property="og:image" content="https://www.joshuaeze.com/images/joshua-eze.jpg">
     <title>Joshua Eze • Business Strategist | @mrjoshuaeze</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -114,6 +115,24 @@
         .strategic-text {
             color: #e5e5e5;
         }
+
+        .profile-photo {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-photo-frame:before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 1.5rem;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.6), rgba(255, 255, 255, 0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-[#e5e5e5] antialiased">
@@ -187,44 +206,55 @@
     <!-- Hero Section -->
     <header class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-white/10">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
-                    <div class="w-2 h-2 bg-[#c9a84c] rounded-full"></div>
-                    <span class="text-xs font-medium tracking-[1px] text-[#c9a84c]">MBA • NIGERIAN • BUILDING IN THE UK</span>
-                </div>
-                
-                <h1 class="section-header tracking-tighter text-white mb-4">
-                    Joshua Eze
-                </h1>
-                
-                <p class="text-3xl md:text-4xl font-semibold tracking-tight text-[#c9a84c] mb-6">
-                    I help Africans think bigger<br>about business, money,<br>and building from nothing.
-                </p>
-                
-                <p class="max-w-xl text-lg text-[#a3a3a3] mb-9 leading-relaxed">
-                    MBA-qualified business strategist. Nigerian. Based in Wrexham, Wales on a visa. 
-                    I speak directly from real experience — no fluff, no recycled advice.
-                </p>
-                
-                <div class="flex flex-wrap items-center gap-4">
-                    <a href="#thinking" 
-                       class="group inline-flex items-center justify-center gap-x-3 bg-[#c9a84c] hover:bg-[#b8973e] active:bg-[#a07f2e] transition-all px-8 h-14 rounded-3xl text-[#0a0a0a] font-semibold text-base">
-                        <span>Explore my thinking</span>
-                        <i class="fa-solid fa-arrow-right-long group-active:translate-x-0.5 transition-transform"></i>
-                    </a>
-                    
-                    <a href="#contact" 
-                       class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 px-8 h-14 rounded-3xl font-semibold text-base transition-colors">
-                        Book a strategy conversation
-                    </a>
-                </div>
-                
-                <div class="flex items-center gap-x-6 mt-10 text-sm">
-                    <div class="flex items-center gap-x-2 text-[#a3a3a3]">
-                        <i class="fa-brands fa-x-twitter text-[#c9a84c]"></i>
-                        <a href="https://x.com/mrjoshuaeze" target="_blank" class="hover:text-white transition-colors">@mrjoshuaeze</a>
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
+                        <div class="w-2 h-2 bg-[#c9a84c] rounded-full"></div>
+                        <span class="text-xs font-medium tracking-[1px] text-[#c9a84c]">MBA • NIGERIAN • BUILDING IN THE UK</span>
                     </div>
-                    <div class="text-xs text-[#666]">Wrexham, Wales, United Kingdom</div>
+                    
+                    <h1 class="section-header tracking-tighter text-white mb-4">
+                        Joshua Eze
+                    </h1>
+                    
+                    <p class="text-3xl md:text-4xl font-semibold tracking-tight text-[#c9a84c] mb-6">
+                        I help Africans think bigger<br>about business, money,<br>and building from nothing.
+                    </p>
+                    
+                    <p class="max-w-xl text-lg text-[#a3a3a3] mb-9 leading-relaxed">
+                        MBA-qualified business strategist. Nigerian. Based in Wrexham, Wales on a visa. 
+                        I speak directly from real experience — no fluff, no recycled advice.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#thinking" 
+                           class="group inline-flex items-center justify-center gap-x-3 bg-[#c9a84c] hover:bg-[#b8973e] active:bg-[#a07f2e] transition-all px-8 h-14 rounded-3xl text-[#0a0a0a] font-semibold text-base">
+                            <span>Explore my thinking</span>
+                            <i class="fa-solid fa-arrow-right-long group-active:translate-x-0.5 transition-transform"></i>
+                        </a>
+                        
+                        <a href="#contact" 
+                           class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 px-8 h-14 rounded-3xl font-semibold text-base transition-colors">
+                            Book a strategy conversation
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-x-6 mt-10 text-sm">
+                        <div class="flex items-center gap-x-2 text-[#a3a3a3]">
+                            <i class="fa-brands fa-x-twitter text-[#c9a84c]"></i>
+                            <a href="https://x.com/mrjoshuaeze" target="_blank" class="hover:text-white transition-colors">@mrjoshuaeze</a>
+                        </div>
+                        <div class="text-xs text-[#666]">Wrexham, Wales, United Kingdom</div>
+                    </div>
+                </div>
+
+                <div class="relative profile-photo-frame max-w-md mx-auto lg:max-w-none lg:ml-auto w-full">
+                    <img src="/images/joshua-eze.jpg"
+                         alt="Joshua Eze — MBA-qualified business strategist"
+                         class="profile-photo w-full aspect-[4/5] object-cover object-[center_20%] rounded-3xl border border-white/10">
+                    <div class="absolute -bottom-4 -left-4 px-4 py-2 bg-[#111] border border-white/10 rounded-2xl text-xs text-[#a3a3a3] hidden sm:block">
+                        <span class="text-[#c9a84c] font-semibold">@mrjoshuaeze</span> · Business Strategist
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,6 +266,9 @@
             <!-- Left -->
             <div class="md:col-span-5">
                 <div class="sticky top-24">
+                    <img src="/images/joshua-eze.jpg"
+                         alt="Joshua Eze"
+                         class="w-28 h-28 rounded-2xl object-cover object-[center_20%] border border-[#c9a84c]/30 mb-8 hidden md:block">
                     <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 01</span>
                     <h2 class="section-header tracking-tighter mt-3 mb-6 text-white">A rare combination</h2>
                     
