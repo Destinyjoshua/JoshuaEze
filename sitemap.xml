@@ -1,230 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sitemap for Joshua Eze - Business strategist for ambitious Africans. Navigate all public pages and resources." />
-    <title>HTML Sitemap - Joshua Eze</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background: #f9fafb;
-            color: #111827;
-            line-height: 1.5;
-            padding: 2rem 1rem;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            padding: 2rem;
-        }
-        
-        main {
-            width: 100%;
-        }
-        
-        h1 {
-            font-size: 1.875rem;
-            font-weight: 700;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        h1 + p {
-            color: #6b7280;
-            margin-bottom: 2rem;
-        }
-        
-        h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 1.5rem 0 0.75rem 0;
-            color: #1f2937;
-        }
-        
-        nav {
-            margin-bottom: 1rem;
-        }
-        
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        li {
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s, text-decoration 0.2s;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-            color: #1d4ed8;
-        }
-        
-        a:focus {
-            outline: 2px solid #2563eb;
-            outline-offset: 2px;
-            border-radius: 0.25rem;
-        }
-        
-        .draft-link {
-            color: #9ca3af;
-            cursor: not-allowed;
-            font-style: italic;
-        }
-        
-        .draft-link:hover {
-            text-decoration: none;
-            color: #9ca3af;
-        }
-        
-        .note {
-            background: #f3f4f6;
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem;
-            font-size: 0.875rem;
-            color: #4b5563;
-            margin-top: 2rem;
-            border-left: 4px solid #2563eb;
-        }
-        
-        .note strong {
-            color: #111827;
-        }
-        
-        .badge {
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 9999px;
-            padding: 0.25rem 0.625rem;
-            vertical-align: middle;
-            white-space: nowrap;
-        }
-        
-        .badge.live {
-            background: #dcfce7;
-            color: #166534;
-        }
-        
-        .badge.draft {
-            background: #fef3c7;
-            color: #92400e;
-        }
-        
-        .badge.coming-soon {
-            background: #e0e7ff;
-            color: #3730a3;
-        }
-        
-        footer {
-            margin-top: 2rem;
-            font-size: 0.75rem;
-            text-align: center;
-            color: #6b7280;
-            border-top: 1px solid #e5e7eb;
-            padding-top: 1.5rem;
-        }
-        
-        @media (max-width: 640px) {
-            .container {
-                padding: 1.5rem 1rem;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            h2 {
-                font-size: 1.125rem;
-            }
-            
-            body {
-                padding: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <main>
-        <h1>Sitemap · joshuaeze.com</h1>
-        <p>This page lists all public pages on <strong>Joshua Eze</strong> – business strategist for ambitious Africans.</p>
-        
-        <nav>
-            <h2>Main Pages</h2>
-            <ul>
-                <li>
-                    <a href="https://www.joshuaeze.com/">Homepage</a>
-                    <span class="badge live">live</span>
-                </li>
-            </ul>
-        </nav>
-        
-        <nav>
-            <h2>Blog</h2>
-            <ul>
-                <li>
-                    <span class="draft-link">Strategy in High-Constraint Environments</span>
-                    <span class="badge draft">draft</span>
-                </li>
-                <li>
-                    <span class="draft-link">Why MBA Strategy Fails in Nigeria</span>
-                    <span class="badge draft">draft</span>
-                </li>
-                <li>
-                    <span class="draft-link">Building from Nothing: African Playbook</span>
-                    <span class="badge draft">draft</span>
-                </li>
-            </ul>
-        </nav>
-        
-        <nav>
-            <h2>Utility &amp; SEO</h2>
-            <ul>
-                <li>
-                    <a href="https://www.joshuaeze.com/sitemap.xml">XML Sitemap</a>
-                    <span class="badge live">live</span>
-                </li>
-                <li>
-                    <span class="draft-link">robots.txt</span>
-                    <span class="badge coming-soon">coming soon</span>
-                </li>
-            </ul>
-        </nav>
-        
-        <div class="note">
-            <strong>Why an HTML sitemap?</strong><br>
-            It helps both users and search engines navigate your site. Even if your XML sitemap is temporarily unreadable by Google, an HTML sitemap provides a reliable, human-friendly alternative for crawlers to discover your content.
-        </div>
-    </main>
-    
-    <footer>
-        Last updated: June 9, 2026 &nbsp;|&nbsp; Joshua Eze - Business Strategy for Africa
-    </footer>
-</div>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.joshuaeze.com/</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/#about</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/#pillars</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/#thinking</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/#journey</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/#contact</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.joshuaeze.com/sitemap.html</loc>
+        <lastmod>2026-06-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>
