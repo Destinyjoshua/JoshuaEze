@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joshua Eze — MBA-qualified business strategist helping Africans think bigger about business, money, and building from nothing. Honest. Direct. Practical.">
+    <title>Joshua Eze • Business Strategist | @mrjoshuaeze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+        }
+
+        .section-header {
+            font-size: 2.75rem;
+            line-height: 1.05;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #c9a84c;
+        }
+
+        .glass {
+            background: rgba(255,255,255, 0.03);
+            backdrop-filter: blur(20px);
+        }
+
+        .gold-accent {
+            color: #c9a84c;
+        }
+
+        .gold-bg {
+            background-color: #c9a84c;
+        }
+
+        .project-card, .pillar-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                       box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1),
+                       border-color 0.2s ease;
+        }
+        
+        .project-card:hover, .pillar-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            border-color: #c9a84c;
+        }
+
+        .skill-pill {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            background-color: #1f1f1f;
+            border-color: #c9a84c;
+        }
+
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-item:not(:last-child):before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 42px;
+            bottom: -18px;
+            width: 2px;
+            background: #27251f;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .modern-shadow {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+                        0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-active {
+            color: #c9a84c;
+            position: relative;
+        }
+        
+        .nav-active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #c9a84c;
+        }
+
+        .premium-border {
+            border-color: #27251f;
+        }
+
+        .strategic-text {
+            color: #e5e5e5;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-[#e5e5e5] antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 rounded-2xl bg-[#c9a84c] flex items-center justify-center">
+                        <span class="text-[#0a0a0a] font-bold text-2xl tracking-tighter">JE</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-2xl tracking-tighter">Joshua Eze</span>
+                        <span class="ml-2 text-xs text-[#c9a84c] font-medium">@mrjoshuaeze</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm">
+                    <a href="#about" class="nav-link text-[#a3a3a3] hover:text-white font-medium">About</a>
+                    <a href="#pillars" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Pillars</a>
+                    <a href="#thinking" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Thinking</a>
+                    <a href="#journey" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Journey</a>
+                    <a href="#contact" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Contact</a>
+                </div>
+
+                <!-- Right side actions -->
+                <div class="hidden md:flex items-center gap-x-4">
+                    <a href="https://x.com/mrjoshuaeze" target="_blank"
+                       class="px-5 py-2.5 text-sm font-medium border border-white/20 hover:bg-white/5 rounded-3xl transition-colors flex items-center gap-x-2">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span>Follow on X</span>
+                    </a>
+                    <a href="#contact" 
+                       class="px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a]">
+                        <span>Let's talk strategy</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-[#a3a3a3] hover:text-white transition-colors">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-[60] bg-[#0a0a0a] pt-20 px-6">
+        <div class="flex flex-col gap-y-1 text-lg">
+            <a href="#about" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">About</a>
+            <a href="#pillars" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Pillars</a>
+            <a href="#thinking" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Thinking</a>
+            <a href="#journey" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Journey</a>
+            <a href="#contact" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Contact</a>
+            
+            <div class="pt-8 flex flex-col gap-y-3">
+                <a href="https://x.com/mrjoshuaeze" target="_blank" class="flex items-center justify-center gap-x-2 py-3.5 border border-white/20 rounded-3xl text-sm font-medium">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span>Follow on X</span>
+                </a>
+                <a href="#contact" class="flex items-center justify-center gap-x-2 py-3.5 bg-[#c9a84c] text-[#0a0a0a] rounded-3xl text-sm font-semibold">
+                    Let's talk strategy
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
+                    <div class="w-2 h-2 bg-[#c9a84c] rounded-full"></div>
+                    <span class="text-xs font-medium tracking-[1px] text-[#c9a84c]">MBA • NIGERIAN • BUILDING IN THE UK</span>
+                </div>
+                
+                <h1 class="section-header tracking-tighter text-white mb-4">
+                    Joshua Eze
+                </h1>
+                
+                <p class="text-3xl md:text-4xl font-semibold tracking-tight text-[#c9a84c] mb-6">
+                    I help Africans think bigger<br>about business, money,<br>and building from nothing.
+                </p>
+                
+                <p class="max-w-xl text-lg text-[#a3a3a3] mb-9 leading-relaxed">
+                    MBA-qualified business strategist. Nigerian. Based in Wrexham, Wales on a skilled worker visa. 
+                    I speak directly from real experience — no fluff, no recycled advice.
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#thinking" 
+                       class="group inline-flex items-center justify-center gap-x-3 bg-[#c9a84c] hover:bg-[#b8973e] active:bg-[#a07f2e] transition-all px-8 h-14 rounded-3xl text-[#0a0a0a] font-semibold text-base">
+                        <span>Explore my thinking</span>
+                        <i class="fa-solid fa-arrow-right-long group-active:translate-x-0.5 transition-transform"></i>
+                    </a>
+                    
+                    <a href="#contact" 
+                       class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 px-8 h-14 rounded-3xl font-semibold text-base transition-colors">
+                        Book a strategy conversation
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-x-6 mt-10 text-sm">
+                    <div class="flex items-center gap-x-2 text-[#a3a3a3]">
+                        <i class="fa-brands fa-x-twitter text-[#c9a84c]"></i>
+                        <a href="https://x.com/mrjoshuaeze" target="_blank" class="hover:text-white transition-colors">@mrjoshuaeze</a>
+                    </div>
+                    <div class="text-xs text-[#666]">Wrexham, Wales, United Kingdom</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About + Positioning -->
+    <section id="about" class="max-w-screen-2xl mx-auto px-8 pt-20 pb-16">
+        <div class="grid md:grid-cols-12 gap-x-12 items-start">
+            <!-- Left -->
+            <div class="md:col-span-5">
+                <div class="sticky top-24">
+                    <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 01</span>
+                    <h2 class="section-header tracking-tighter mt-3 mb-6 text-white">A rare combination</h2>
+                    
+                    <div class="prose prose-invert text-[#a3a3a3] max-w-none text-[15px] leading-relaxed">
+                        <p>I sit at the intersection of four things that almost never show up together:</p>
+                    </div>
+                    
+                    <ul class="mt-6 space-y-3 text-sm">
+                        <li class="flex gap-x-3"><span class="text-[#c9a84c] mt-1">→</span> <span>MBA-qualified business thinker</span></li>
+                        <li class="flex gap-x-3"><span class="text-[#c9a84c] mt-1">→</span> <span>Nigerian identity and cultural context</span></li>
+                        <li class="flex gap-x-3"><span class="text-[#c9a84c] mt-1">→</span> <span>Building in the UK on a skilled worker visa — real constraints, real results</span></li>
+                        <li class="flex gap-x-3"><span class="text-[#c9a84c] mt-1">→</span> <span>Lived experience designing and running actual businesses</span></li>
+                    </ul>
+                    
+                    <p class="mt-6 text-sm text-[#a3a3a3]">This combination is rare. It’s also powerful.</p>
+                </div>
+            </div>
+            
+            <!-- Right -->
+            <div class="md:col-span-7 mt-10 md:mt-0">
+                <div class="bg-[#111] border border-white/10 rounded-3xl p-8 md:p-10">
+                    <div class="text-[#c9a84c] text-sm tracking-widest mb-3">MY NORTH STAR</div>
+                    <blockquote class="text-xl leading-tight text-white">
+                        “Would someone share this because it made them think differently?”
+                    </blockquote>
+                    <p class="mt-4 text-sm text-[#a3a3a3]">Every piece of content I create must pass this test. If it doesn’t, I rewrite it.</p>
+                    
+                    <div class="mt-8 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+                        <div>
+                            <div class="text-[#c9a84c] text-xs tracking-widest">CURRENT FOCUS</div>
+                            <div class="mt-1 font-medium">Building in public while helping others do the same — honestly.</div>
+                        </div>
+                        <div>
+                            <div class="text-[#c9a84c] text-xs tracking-widest">LOCATION</div>
+                            <div class="mt-1 font-medium">Wrexham, Wales, UK<br><span class="text-xs text-[#666]">Skilled Worker Visa</span></div>
+                        </div>
+                        <div>
+                            <div class="text-[#c9a84c] text-xs tracking-widest">APPROACH</div>
+                            <div class="mt-1 font-medium">Direct. Honest. Zero fluff.<br>Practical frameworks rooted in African reality.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Pillars -->
+    <section id="pillars" class="max-w-screen-2xl mx-auto px-8 py-16 border-t border-white/10 bg-[#111]">
+        <div class="max-w-3xl mb-10">
+            <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 02</span>
+            <h2 class="section-header tracking-tighter mt-2 text-white">What I talk about</h2>
+            <p class="text-[#a3a3a3] mt-3">Five content pillars. Every post, thread, and video serves one of these.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            
+            <div class="pillar-card bg-[#0a0a0a] border border-white/10 hover:border-[#c9a84c]/60 rounded-3xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="text-[#c9a84c] text-4xl font-semibold tracking-tighter">35%</div>
+                </div>
+                <div class="font-semibold text-lg mb-2">Business Strategy</div>
+                <div class="text-sm text-[#a3a3a3]">Frameworks, models, and strategic thinking that actually works in real markets.</div>
+            </div>
+            
+            <div class="pillar-card bg-[#0a0a0a] border border-white/10 hover:border-[#c9a84c]/60 rounded-3xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="text-[#c9a84c] text-4xl font-semibold tracking-tighter">25%</div>
+                </div>
+                <div class="font-semibold text-lg mb-2">Nigerian / African Context</div>
+                <div class="text-sm text-[#a3a3a3]">Economy, opportunity, entrepreneurship, and doing business on the continent.</div>
+            </div>
+            
+            <div class="pillar-card bg-[#0a0a0a] border border-white/10 hover:border-[#c9a84c]/60 rounded-3xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="text-[#c9a84c] text-4xl font-semibold tracking-tighter">20%</div>
+                </div>
+                <div class="font-semibold text-lg mb-2">Personal Journey</div>
+                <div class="text-sm text-[#a3a3a3]">Building under real constraints, visa life, honest reflections, and lessons learned the hard way.</div>
+            </div>
+            
+            <div class="pillar-card bg-[#0a0a0a] border border-white/10 hover:border-[#c9a84c]/60 rounded-3xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="text-[#c9a84c] text-4xl font-semibold tracking-tighter">10%</div>
+                </div>
+                <div class="font-semibold text-lg mb-2">Policy &amp; Big Thinking</div>
+                <div class="text-sm text-[#a3a3a3]">Governance, leadership, and ideas for Africa’s future — no surface-level takes.</div>
+            </div>
+            
+            <div class="pillar-card bg-[#0a0a0a] border border-white/10 hover:border-[#c9a84c]/60 rounded-3xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="text-[#c9a84c] text-4xl font-semibold tracking-tighter">10%</div>
+                </div>
+                <div class="font-semibold text-lg mb-2">Engagement</div>
+                <div class="text-sm text-[#a3a3a3]">Questions, polls, reactions to trending topics, and direct conversation with the community.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Thinking -->
+    <section id="thinking" class="max-w-screen-2xl mx-auto px-8 py-20">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+            <div>
+                <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 03</span>
+                <h2 class="section-header tracking-tighter mt-2 text-white">Featured thinking</h2>
+            </div>
+            <a href="https://x.com/mrjoshuaeze" target="_blank" class="mt-4 md:mt-0 inline-flex items-center text-sm font-medium text-[#a3a3a3] hover:text-white group">
+                See everything on X 
+                <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-0.5 transition"></i>
+            </a>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Thinking Card 1 -->
+            <div onclick="showThinkingModal(0)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+                <div class="p-6 flex-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">FRAMEWORK</span>
+                        <span class="text-xs text-[#666]">2025</span>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Strategy in High-Constraint Environments</h3>
+                    <p class="text-[#a3a3a3] text-sm line-clamp-3">How to build when capital is low, infrastructure is unreliable, and the rules keep changing. The real playbook, not theory.</p>
+                </div>
+                <div class="px-6 pb-6 flex items-center justify-between text-xs">
+                    <div class="flex gap-x-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Constraints</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Execution</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thinking Card 2 -->
+            <div onclick="showThinkingModal(1)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+                <div class="p-6 flex-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">AFRICAN CONTEXT</span>
+                        <span class="text-xs text-[#666]">2025</span>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">The African Entrepreneur’s Real Playbook</h3>
+                    <p class="text-[#a3a3a3] text-sm line-clamp-3">Why most imported business advice fails on the continent — and what actually works when you’re building in Lagos, Accra, or Nairobi.</p>
+                </div>
+                <div class="px-6 pb-6 flex items-center justify-between text-xs">
+                    <div class="flex gap-x-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Africa</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Reality</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thinking Card 3 -->
+            <div onclick="showThinkingModal(2)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+                <div class="p-6 flex-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">PERSONAL</span>
+                        <span class="text-xs text-[#666]">2025</span>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">What Building on a Skilled Worker Visa Actually Looks Like</h3>
+                    <p class="text-[#a3a3a3] text-sm line-clamp-3">The invisible constraints, the mental load, and the strategies I’ve developed to keep moving forward anyway.</p>
+                </div>
+                <div class="px-6 pb-6 flex items-center justify-between text-xs">
+                    <div class="flex gap-x-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Visa Life</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Honest</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thinking Card 4 -->
+            <div onclick="showThinkingModal(3)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+                <div class="p-6 flex-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">BIG PICTURE</span>
+                        <span class="text-xs text-[#666]">2024</span>
+                    </div>
+                    <h3 class="font-semibold text-xl tracking-tight mb-3">Why Africa’s Biggest Problem Isn’t Capital — It’s Thinking</h3>
+                    <p class="text-[#a3a3a3] text-sm line-clamp-3">A contrarian view on what’s actually holding the continent back — and the uncomfortable conversations we need to have.</p>
+                </div>
+                <div class="px-6 pb-6 flex items-center justify-between text-xs">
+                    <div class="flex gap-x-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Policy</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-2xl">Mindset</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey -->
+    <section id="journey" class="max-w-screen-2xl mx-auto px-8 py-16 border-t border-white/10">
+        <div class="max-w-3xl mb-12">
+            <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 04</span>
+            <h2 class="section-header tracking-tighter mt-2 text-white">The journey so far</h2>
+        </div>
+        
+        <div class="max-w-3xl space-y-10">
+            
+            <div class="timeline-item flex gap-6">
+                <div class="w-8 h-8 mt-1 flex-shrink-0 rounded-2xl bg-[#c9a84c]/10 flex items-center justify-center border border-[#c9a84c]/30">
+                    <i class="fa-solid fa-graduation-cap text-[#c9a84c] text-sm"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="font-semibold text-lg">MBA in Business Strategy</div>
+                    <div class="text-[#a3a3a3] text-sm">Formal education + real-world application</div>
+                    <div class="mt-3 text-sm text-[#a3a3a3]">Learned the frameworks. Then spent years learning which ones survive contact with African markets.</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item flex gap-6">
+                <div class="w-8 h-8 mt-1 flex-shrink-0 rounded-2xl bg-[#c9a84c]/10 flex items-center justify-center border border-[#c9a84c]/30">
+                    <i class="fa-solid fa-briefcase text-[#c9a84c] text-sm"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="font-semibold text-lg">Built and ran real businesses</div>
+                    <div class="text-[#a3a3a3] text-sm">Products, services, and operations — from the ground up</div>
+                    <div class="mt-3 text-sm text-[#a3a3a3]">Designed, launched, and scaled multiple ventures. Failed some. Learned from all of them. This is where the honesty comes from.</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item flex gap-6">
+                <div class="w-8 h-8 mt-1 flex-shrink-0 rounded-2xl bg-[#c9a84c]/10 flex items-center justify-center border border-[#c9a84c]/30">
+                    <i class="fa-solid fa-plane text-[#c9a84c] text-sm"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="font-semibold text-lg">Moved to the UK on a Skilled Worker Visa</div>
+                    <div class="text-[#a3a3a3] text-sm">Wrexham, Wales — new chapter, same mission</div>
+                    <div class="mt-3 text-sm text-[#a3a3a3]">Building in a new environment with new constraints. Documenting the process publicly so others can learn from it.</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item flex gap-6">
+                <div class="w-8 h-8 mt-1 flex-shrink-0 rounded-2xl bg-[#c9a84c]/10 flex items-center justify-center border border-[#c9a84c]/30">
+                    <i class="fa-solid fa-bullhorn text-[#c9a84c] text-sm"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="font-semibold text-lg">Building in public as a business strategist</div>
+                    <div class="text-[#a3a3a3] text-sm">X-first personal brand focused on honest African business strategy</div>
+                    <div class="mt-3 text-sm text-[#a3a3a3]">Now helping ambitious Africans cut through the noise with sharp, practical, context-aware thinking.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-screen-2xl mx-auto px-8 py-20 border-t border-white/10 bg-[#111]">
+        <div class="max-w-2xl mx-auto text-center">
+            <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 05</span>
+            <h2 class="section-header tracking-tighter mt-3 mb-4 text-white">Ready to think bigger?</h2>
+            <p class="text-[#a3a3a3] max-w-md mx-auto">Whether you’re building your first venture, scaling an existing one, or just want sharper strategic thinking — I’m here for the honest conversation.</p>
+        </div>
+        
+        <div class="max-w-xl mx-auto mt-10">
+            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs tracking-widest text-[#666] mb-1.5 ml-1">YOUR NAME</label>
+                        <input type="text" id="name" required 
+                               class="w-full bg-[#0a0a0a] border border-white/10 focus:border-[#c9a84c] transition-colors rounded-2xl px-5 py-3.5 text-sm placeholder:text-[#666] outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-widest text-[#666] mb-1.5 ml-1">EMAIL ADDRESS</label>
+                        <input type="email" id="email" required 
+                               class="w-full bg-[#0a0a0a] border border-white/10 focus:border-[#c9a84c] transition-colors rounded-2xl px-5 py-3.5 text-sm placeholder:text-[#666] outline-none">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-xs tracking-widest text-[#666] mb-1.5 ml-1">WHAT ARE YOU WORKING ON OR STRUGGLING WITH?</label>
+                    <textarea id="message" rows="5" required 
+                              class="w-full bg-[#0a0a0a] border border-white/10 focus:border-[#c9a84c] transition-colors rounded-3xl px-5 py-4 text-sm placeholder:text-[#666] outline-none resize-y min-h-[120px]"></textarea>
+                </div>
+                
+                <div class="pt-2">
+                    <button type="submit" 
+                            class="w-full sm:w-auto px-10 py-4 bg-[#c9a84c] hover:bg-[#b8973e] active:bg-[#a07f2e] transition-all text-[#0a0a0a] font-semibold rounded-3xl flex items-center justify-center gap-x-2 text-sm">
+                        <span>Send message</span>
+                    </button>
+                </div>
+            </form>
+            
+            <div id="form-success" class="hidden mt-6 p-5 bg-emerald-950/40 border border-emerald-900/50 rounded-3xl text-center">
+                <div class="flex justify-center mb-3">
+                    <i class="fa-regular fa-check-circle text-emerald-400 text-3xl"></i>
+                </div>
+                <div class="font-medium">Thank you. I’ve received your message.</div>
+                <p class="text-xs text-emerald-400/80 mt-1">I’ll reply within 48 hours.</p>
+            </div>
+        </div>
+        
+        <div class="flex justify-center gap-x-8 mt-12 text-sm">
+            <a href="https://x.com/mrjoshuaeze" target="_blank" class="flex items-center gap-x-2 text-[#a3a3a3] hover:text-white transition-colors">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span>@mrjoshuaeze on X</span>
+            </a>
+            <a href="#" class="flex items-center gap-x-2 text-[#a3a3a3] hover:text-white transition-colors">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-8">
+        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row md:items-center justify-between gap-y-4 text-xs text-[#666]">
+            <div>© 2026 Joshua Eze. Sharp thinking, no fluff.</div>
+            <div class="flex items-center gap-x-5">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <div class="w-px h-2.5 bg-white/20"></div>
+                <span>Built with intention in Wrexham, Wales</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thinking Modal -->
+    <div id="thinking-modal" onclick="hideThinkingModal()" class="hidden fixed inset-0 z-[70] bg-black/90 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="custom-modal bg-[#111] border border-white/10 w-full max-w-3xl rounded-3xl overflow-hidden">
+            
+            <div class="flex items-center justify-between px-8 py-5 border-b border-white/10">
+                <div id="modal-thinking-title" class="font-semibold text-2xl tracking-tight text-white"></div>
+                <button onclick="hideThinkingModal()" class="w-9 h-9 flex items-center justify-center text-[#a3a3a3] hover:text-white hover:bg-white/5 rounded-2xl transition-colors">
+                    <i class="fa-solid fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="p-8">
+                <div id="modal-thinking-image" class="w-full h-64 rounded-2xl overflow-hidden mb-8 bg-[#0a0a0a]"></div>
+                
+                <div class="prose prose-invert max-w-none text-[#e5e5e5]">
+                    <div id="modal-thinking-description" class="text-[15px] leading-relaxed"></div>
+                </div>
+                
+                <div class="mt-8 grid md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="uppercase text-xs tracking-[2px] text-[#c9a84c] mb-3">KEY TAKEAWAYS</div>
+                        <div id="modal-thinking-takeaways" class="text-sm text-[#a3a3a3] space-y-2"></div>
+                    </div>
+                    <div>
+                        <div class="uppercase text-xs tracking-[2px] text-[#c9a84c] mb-3">RELATED PILLAR</div>
+                        <div id="modal-thinking-pillar" class="font-medium text-white"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="px-8 py-6 bg-[#0a0a0a] flex items-center justify-between border-t border-white/10">
+                <div class="text-xs text-[#666]">Published on X • Full thread available</div>
+                <a href="https://x.com/mrjoshuaeze" target="_blank" 
+                   class="inline-flex items-center gap-x-2 px-5 py-2.5 text-sm font-semibold bg-white text-[#0a0a0a] rounded-3xl hover:bg-zinc-100 transition-all">
+                    <span>Read full thread on X</span>
+                    <i class="fa-brands fa-x-twitter text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function initializeTailwind() {
+            // No custom config needed — using direct hex for gold
+        }
+        
+        function setupMobileMenu() {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    menuBtn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                }
+            });
+            
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                });
+            });
+        }
+        
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.scrollY - navHeight;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        const thinkingItems = [
+            {
+                id: 0,
+                title: "Strategy in High-Constraint Environments",
+                description: "Most strategy frameworks assume abundant resources, stable institutions, and predictable markets. They fail when applied in environments where capital is scarce, infrastructure is unreliable, and policy can shift overnight. This framework shows how to design strategy that actually survives real-world African conditions — starting with constraint mapping and building adaptive advantage.",
+                takeaways: [
+                    "Constraint mapping before opportunity mapping",
+                    "Build optionality into every major decision",
+                    "Design for reversibility, not just scalability",
+                    "Turn regulatory and infrastructure gaps into moats"
+                ],
+                pillar: "Business Strategy + Nigerian/African Context"
+            },
+            {
+                id: 1,
+                title: "The African Entrepreneur’s Real Playbook",
+                description: "Imported playbooks from Silicon Valley or Harvard case studies rarely survive first contact with African reality. This piece breaks down why — and offers a grounded alternative built on distribution realities, trust economics, informal networks, and capital constraints that actually exist on the ground.",
+                takeaways: [
+                    "Distribution often beats product in African markets",
+                    "Trust is the real currency — build it before you sell",
+                    "Formal vs informal economy strategies are different games",
+                    "Capital efficiency > capital raising in most cases"
+                ],
+                pillar: "Nigerian/African Context"
+            },
+            {
+                id: 2,
+                title: "What Building on a Skilled Worker Visa Actually Looks Like",
+                description: "The public narrative around moving abroad is usually either overly rosy or overly dramatic. The truth sits in the middle: real constraints on time, energy, and risk-taking that most people don’t talk about. Here’s how I’ve learned to navigate it while still building publicly and strategically.",
+                takeaways: [
+                    "Visa status changes how you allocate risk and time",
+                    "Mental load is higher than people admit",
+                    "You can still build in public — it just requires different boundaries",
+                    "Constraints can force better focus and decision-making"
+                ],
+                pillar: "Personal Journey"
+            },
+            {
+                id: 3,
+                title: "Why Africa’s Biggest Problem Isn’t Capital — It’s Thinking",
+                description: "We talk endlessly about access to capital. But the deeper issue is often how we think about problems, opportunities, and what “success” even looks like. This contrarian take argues that until we upgrade the quality of strategic thinking at individual and institutional levels, more capital won’t solve the structural challenges.",
+                takeaways: [
+                    "Imported mental models often create more problems than they solve",
+                    "Short-termism is cultural and structural — not just a funding issue",
+                    "We need more honest, context-native strategic frameworks",
+                    "Thinking quality compounds faster than capital access"
+                ],
+                pillar: "Policy & Big Thinking"
+            }
+        ];
+        
+        function showThinkingModal(index) {
+            const item = thinkingItems[index];
+            const modal = document.getElementById('thinking-modal');
+            
+            document.getElementById('modal-thinking-title').textContent = item.title;
+            document.getElementById('modal-thinking-description').innerHTML = item.description;
+            
+            const takeawaysContainer = document.getElementById('modal-thinking-takeaways');
+            takeawaysContainer.innerHTML = item.takeaways.map(t => 
+                `<div class="flex items-start gap-x-2"><span class="text-[#c9a84c] mt-1">→</span> <span>${t}</span></div>`
+            ).join('');
+            
+            document.getElementById('modal-thinking-pillar').innerHTML = item.pillar;
+            
+            // Simple placeholder image
+            const imageContainer = document.getElementById('modal-thinking-image');
+            imageContainer.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center"><div class="text-center"><div class="text-[#c9a84c] text-sm tracking-widest mb-1">JOSHUA EZE</div><div class="text-white text-lg font-medium">Strategic Thinking</div></div></div>`;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideThinkingModal() {
+            const modal = document.getElementById('thinking-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const successMsg = document.getElementById('form-success');
+            
+            form.style.transition = 'all 0.3s ease';
+            form.style.opacity = '0';
+            
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMsg.style.display = 'block';
+                successMsg.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    form.reset();
+                    form.style.opacity = '1';
+                    form.style.display = 'block';
+                    successMsg.style.display = 'none';
+                }, 4800);
+            }, 450);
+        }
+        
+        function setupScrollAnimations() {
+            const observer = new IntersectionObserver((entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }), { threshold: 0.1 });
+            
+            document.querySelectorAll('.pillar-card, .project-card').forEach(el => {
+                el.style.opacity = '0.98';
+                el.style.transform = 'translateY(10px)';
+                observer.observe(el);
+            });
+        }
+        
+        function setupKeyboardControls() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('thinking-modal');
+                    if (modal.style.display === 'flex') {
+                        hideThinkingModal();
+                    }
+                }
+            });
+        }
+        
+        function initializeWebsite() {
+            initializeTailwind();
+            setupMobileMenu();
+            setupSmoothScroll();
+            setupScrollAnimations();
+            setupKeyboardControls();
+            
+            // Active nav on scroll
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            const sections = ['about', 'pillars', 'thinking', 'journey', 'contact'];
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                const scrollY = window.scrollY + 120;
+                
+                sections.forEach(sectionId => {
+                    const sectionEl = document.getElementById(sectionId);
+                    if (sectionEl && scrollY >= sectionEl.offsetTop) {
+                        current = sectionId;
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('nav-active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('nav-active');
+                    }
+                });
+            });
+            
+            console.log('%c[Website] Joshua Eze personal brand site initialized — gold accent + strategic tone applied.', 'color:#666');
+        }
+        
+        window.onload = initializeWebsite;
+    </script>
+</body>
+</html>
