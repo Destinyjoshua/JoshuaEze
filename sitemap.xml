@@ -1,16 +1,117 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Sitemap - Joshua Eze</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9fafb;
+            color: #111827;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+            color: #1f2937;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            background: #f3f4f6;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            color: #4b5563;
+            margin-top: 2rem;
+            border-left: 4px solid #2563eb;
+        }
+        .badge {
+            font-size: 0.75rem;
+            background: #e5e7eb;
+            color: #374151;
+            border-radius: 9999px;
+            padding: 0.125rem 0.5rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        footer {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 Sitemap · joshuaeze.com</h1>
+    <p>This page lists all public pages on <strong>Joshua Eze</strong> – business strategist for ambitious Africans.</p>
 
+    <h2>🌐 Main Pages</h2>
+    <ul>
+        <li><a href="https://www.joshuaeze.com/">🏠 Homepage</a> <span class="badge">live</span></li>
+    </ul>
 
-<url>
-  <loc>https://www.joshuaeze.com/</loc>
-  <lastmod>2026-06-09T19:38:49+00:00</lastmod>
-</url>
+    <h2>📝 Blog (coming soon)</h2>
+    <ul>
+        <li><a href="#">/blog/strategy-in-high-constraint-environments</a> <span class="badge">draft</span></li>
+        <li><a href="#">/blog/why-mba-strategy-fails-in-nigeria</a> <span class="badge">draft</span></li>
+        <li><a href="#">/blog/building-from-nothing-african-playbook</a> <span class="badge">draft</span></li>
+    </ul>
 
+    <h2>ℹ️ Utility</h2>
+    <ul>
+        <li><a href="https://www.joshuaeze.com/sitemap.xml">XML Sitemap</a></li>
+        <li><a href="https://www.joshuaeze.com/robots.txt">robots.txt</a> <span class="badge">add me</span></li>
+    </ul>
 
-</urlset>
+    <div class="note">
+        ✅ <strong>Why an HTML sitemap?</strong><br>
+        It helps both users and search engines navigate your site. Even if your XML sitemap is temporarily unreadable by Google, an HTML sitemap provides a reliable, human‑friendly alternative for crawlers to discover your content.
+    </div>
+
+    <footer>
+        Last updated: June 9, 2026 &nbsp;|&nbsp; Joshua Eze – Business Strategy for Africa
+    </footer>
+</div>
+</body>
+</html>
