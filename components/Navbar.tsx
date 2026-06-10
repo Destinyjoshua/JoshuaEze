@@ -68,7 +68,7 @@ export default function Navbar() {
               href="#contact"
               className="js-calendly-trigger px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a] cursor-pointer"
             >
-              Let's talk strategy
+              {"Let's talk strategy"}
             </a>
           </div>
 
@@ -118,7 +118,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="js-calendly-trigger flex items-center justify-center gap-x-2 py-3.5 bg-[#c9a84c] text-[#0a0a0a] rounded-3xl text-sm font-semibold cursor-pointer"
               >
-                Let's talk strategy
+                {"Let's talk strategy"}
               </a>
             </div>
           </div>
