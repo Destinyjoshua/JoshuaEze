@@ -1,19 +1,32 @@
 {
-  "name": "joshua-eze-portfolio",
-  "version": "1.0.0",
-  "description": "Joshua Eze's portfolio website",
+  "name": "joshua-eze",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^1.0.12"
+    "@vercel/speed-insights": "^1.0.12",
+    "date-fns": "^3.6.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.408.0",
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Destinyjoshua/JoshuaEze.git"
-  },
-  "keywords": ["portfolio", "website"],
-  "author": "Joshua Eze",
-  "license": "MIT"
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
 }
