@@ -1,2 +1,29 @@
+# Dependencies
+node_modules/
+
+# OS / Editor
 .DS_Store
-images/JoshuaEze.JPG
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# Build / cache
+dist/
+build/
+.next/
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Misc
+*.bak

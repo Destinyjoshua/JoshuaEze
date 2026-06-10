@@ -1,0 +1,19 @@
+{
+  "name": "joshua-eze-portfolio",
+  "version": "1.0.0",
+  "description": "Joshua Eze's portfolio website",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Destinyjoshua/JoshuaEze.git"
+  },
+  "keywords": ["portfolio", "website"],
+  "author": "Joshua Eze",
+  "license": "MIT"
+}

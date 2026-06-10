@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Joshua Eze — MBA-qualified business strategist helping Africans think bigger about business, money, and building from nothing. Honest. Direct. Practical.">
-    <meta property="og:image" content="https://www.joshuaeze.com/images/joshua-eze.jpg">
+    <meta property="og:image" content="https://www.joshuaeze.com/images/JoshuaEze.JPG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.joshuaeze.com/images/JoshuaEze.JPG">
     <title>Joshua Eze • Business Strategist | @mrjoshuaeze</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Vercel Speed Insights -->
+    <script src="/speed-insights.js" defer></script>
+    <!-- Calendly (loaded on-demand when user clicks book button) -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
@@ -115,24 +121,6 @@
         .strategic-text {
             color: #e5e5e5;
         }
-
-        .profile-photo {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .profile-photo-frame:before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            border-radius: 1.5rem;
-            padding: 1px;
-            background: linear-gradient(135deg, rgba(201, 168, 76, 0.6), rgba(255, 255, 255, 0.1));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-        }
     </style>
 </head>
 <body class="bg-[#0a0a0a] text-[#e5e5e5] antialiased">
@@ -141,7 +129,7 @@
         <div class="max-w-screen-2xl mx-auto">
             <div class="px-8 py-5 flex items-center justify-between">
                 <!-- Logo -->
-                <a href="/" class="flex items-center gap-x-3">
+                <div class="flex items-center gap-x-3">
                     <div class="w-9 h-9 rounded-2xl bg-[#c9a84c] flex items-center justify-center">
                         <span class="text-[#0a0a0a] font-bold text-2xl tracking-tighter">JE</span>
                     </div>
@@ -149,13 +137,13 @@
                         <span class="font-semibold text-2xl tracking-tighter">Joshua Eze</span>
                         <span class="ml-2 text-xs text-[#c9a84c] font-medium">@mrjoshuaeze</span>
                     </div>
-                </a>
+                </div>
 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-x-9 text-sm">
                     <a href="#about" class="nav-link text-[#a3a3a3] hover:text-white font-medium">About</a>
                     <a href="#pillars" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Pillars</a>
-                    <a href="/blog/" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Blog</a>
+                    <a href="#thinking" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Thinking</a>
                     <a href="#journey" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Journey</a>
                     <a href="#contact" class="nav-link text-[#a3a3a3] hover:text-white font-medium">Contact</a>
                 </div>
@@ -167,8 +155,8 @@
                         <i class="fa-brands fa-x-twitter"></i>
                         <span>Follow on X</span>
                     </a>
-                    <a href="#contact" 
-                       class="px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a]">
+                    <a href="#"
+                       class="js-calendly-trigger px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a] cursor-pointer">
                         <span>Let's talk strategy</span>
                     </a>
                 </div>
@@ -187,7 +175,7 @@
         <div class="flex flex-col gap-y-1 text-lg">
             <a href="#about" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">About</a>
             <a href="#pillars" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Pillars</a>
-            <a href="/blog/" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Blog</a>
+            <a href="#thinking" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Thinking</a>
             <a href="#journey" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Journey</a>
             <a href="#contact" class="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]">Contact</a>
             
@@ -196,7 +184,7 @@
                     <i class="fa-brands fa-x-twitter"></i>
                     <span>Follow on X</span>
                 </a>
-                <a href="#contact" class="flex items-center justify-center gap-x-2 py-3.5 bg-[#c9a84c] text-[#0a0a0a] rounded-3xl text-sm font-semibold">
+                <a href="#" class="js-calendly-trigger flex items-center justify-center gap-x-2 py-3.5 bg-[#c9a84c] text-[#0a0a0a] rounded-3xl text-sm font-semibold cursor-pointer">
                     Let's talk strategy
                 </a>
             </div>
@@ -206,55 +194,44 @@
     <!-- Hero Section -->
     <header class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-white/10">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div>
-                    <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
-                        <div class="w-2 h-2 bg-[#c9a84c] rounded-full"></div>
-                        <span class="text-xs font-medium tracking-[1px] text-[#c9a84c]">MBA • NIGERIAN • BUILDING IN THE UK</span>
-                    </div>
-                    
-                    <h1 class="section-header tracking-tighter text-white mb-4">
-                        Joshua Eze
-                    </h1>
-                    
-                    <p class="text-3xl md:text-4xl font-semibold tracking-tight text-[#c9a84c] mb-6">
-                        I help Africans think bigger<br>about business, money,<br>and building from nothing.
-                    </p>
-                    
-                    <p class="max-w-xl text-lg text-[#a3a3a3] mb-9 leading-relaxed">
-                        MBA-qualified business strategist. Nigerian. Based in Wrexham, Wales on a visa. 
-                        I speak directly from real experience — no fluff, no recycled advice.
-                    </p>
-                    
-                    <div class="flex flex-wrap items-center gap-4">
-                        <a href="#thinking" 
-                           class="group inline-flex items-center justify-center gap-x-3 bg-[#c9a84c] hover:bg-[#b8973e] active:bg-[#a07f2e] transition-all px-8 h-14 rounded-3xl text-[#0a0a0a] font-semibold text-base">
-                            <span>Explore my thinking</span>
-                            <i class="fa-solid fa-arrow-right-long group-active:translate-x-0.5 transition-transform"></i>
-                        </a>
-                        
-                        <a href="#contact" 
-                           class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 px-8 h-14 rounded-3xl font-semibold text-base transition-colors">
-                            Book a strategy conversation
-                        </a>
-                    </div>
-                    
-                    <div class="flex items-center gap-x-6 mt-10 text-sm">
-                        <div class="flex items-center gap-x-2 text-[#a3a3a3]">
-                            <i class="fa-brands fa-x-twitter text-[#c9a84c]"></i>
-                            <a href="https://x.com/mrjoshuaeze" target="_blank" class="hover:text-white transition-colors">@mrjoshuaeze</a>
-                        </div>
-                        <div class="text-xs text-[#666]">Wrexham, Wales, United Kingdom</div>
-                    </div>
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white/5 border border-white/10 mb-6">
+                    <div class="w-2 h-2 bg-[#c9a84c] rounded-full"></div>
+                    <span class="text-xs font-medium tracking-[1px] text-[#c9a84c]">MBA • NIGERIAN • BUILDING IN THE UK</span>
                 </div>
-
-                <div class="relative profile-photo-frame max-w-md mx-auto lg:max-w-none lg:ml-auto w-full">
-                    <img src="/images/joshua-eze.jpg"
-                         alt="Joshua Eze — MBA-qualified business strategist"
-                         class="profile-photo w-full aspect-[4/5] object-cover object-[center_20%] rounded-3xl border border-white/10">
-                    <div class="absolute -bottom-4 -left-4 px-4 py-2 bg-[#111] border border-white/10 rounded-2xl text-xs text-[#a3a3a3] hidden sm:block">
-                        <span class="text-[#c9a84c] font-semibold">@mrjoshuaeze</span> · Business Strategist
+                
+                <h1 class="section-header tracking-tighter text-white mb-4">
+                    Joshua Eze
+                </h1>
+                
+                <p class="text-3xl md:text-4xl font-semibold tracking-tight text-[#c9a84c] mb-6">
+                    I help Africans think bigger<br>about business, money,<br>and building from nothing.
+                </p>
+                
+                <p class="max-w-xl text-lg text-[#a3a3a3] mb-9 leading-relaxed">
+                    MBA-qualified business strategist. Nigerian. Based in Wrexham, Wales on a visa. 
+                    I speak directly from real experience — no fluff, no recycled advice.
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#thinking" 
+                       class="group inline-flex items-center justify-center gap-x-3 bg-[#c9a84c] hover:bg-[#b8973e] active:bg-[#a07f2e] transition-all px-8 h-14 rounded-3xl text-[#0a0a0a] font-semibold text-base">
+                        <span>Explore my thinking</span>
+                        <i class="fa-solid fa-arrow-right-long group-active:translate-x-0.5 transition-transform"></i>
+                    </a>
+                    
+                    <a href="#"
+                       class="js-calendly-trigger inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 px-8 h-14 rounded-3xl font-semibold text-base transition-colors cursor-pointer">
+                        Book a strategy conversation
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-x-6 mt-10 text-sm">
+                    <div class="flex items-center gap-x-2 text-[#a3a3a3]">
+                        <i class="fa-brands fa-x-twitter text-[#c9a84c]"></i>
+                        <a href="https://x.com/mrjoshuaeze" target="_blank" class="hover:text-white transition-colors">@mrjoshuaeze</a>
                     </div>
+                    <div class="text-xs text-[#666]">Wrexham, Wales, United Kingdom</div>
                 </div>
             </div>
         </div>
@@ -266,9 +243,6 @@
             <!-- Left -->
             <div class="md:col-span-5">
                 <div class="sticky top-24">
-                    <img src="/images/joshua-eze.jpg"
-                         alt="Joshua Eze"
-                         class="w-28 h-28 rounded-2xl object-cover object-[center_20%] border border-[#c9a84c]/30 mb-8 hidden md:block">
                     <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 01</span>
                     <h2 class="section-header tracking-tighter mt-3 mb-6 text-white">A rare combination</h2>
                     
@@ -374,8 +348,8 @@
                 <span class="uppercase tracking-[3px] text-xs font-semibold text-[#c9a84c]">CHAPTER 03</span>
                 <h2 class="section-header tracking-tighter mt-2 text-white">Featured thinking</h2>
             </div>
-            <a href="/blog/" class="mt-4 md:mt-0 inline-flex items-center text-sm font-medium text-[#a3a3a3] hover:text-white group">
-                View all posts
+            <a href="https://x.com/mrjoshuaeze" target="_blank" class="mt-4 md:mt-0 inline-flex items-center text-sm font-medium text-[#a3a3a3] hover:text-white group">
+                See everything on X 
                 <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-0.5 transition"></i>
             </a>
         </div>
@@ -383,7 +357,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
             <!-- Thinking Card 1 -->
-            <a href="/blog/strategy-in-high-constraint-environments.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <div onclick="showThinkingModal(0)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">FRAMEWORK</span>
@@ -398,10 +372,10 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Execution</span>
                     </div>
                 </div>
-            </a>
+            </div>
             
             <!-- Thinking Card 2 -->
-            <a href="/blog/african-entrepreneurs-real-playbook.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <div onclick="showThinkingModal(1)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">AFRICAN CONTEXT</span>
@@ -416,10 +390,10 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Reality</span>
                     </div>
                 </div>
-            </a>
+            </div>
             
             <!-- Thinking Card 3 -->
-            <a href="/blog/building-on-a-visa.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <div onclick="showThinkingModal(2)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">PERSONAL</span>
@@ -434,10 +408,10 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Honest</span>
                     </div>
                 </div>
-            </a>
+            </div>
             
             <!-- Thinking Card 4 -->
-            <a href="/blog/africas-biggest-problem-is-thinking.html" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+            <div onclick="showThinkingModal(3)" class="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col">
                 <div class="p-6 flex-1">
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">BIG PICTURE</span>
@@ -452,7 +426,7 @@
                         <span class="px-3 py-1 bg-white/5 rounded-2xl">Mindset</span>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
@@ -547,6 +521,13 @@
                     </button>
                 </div>
             </form>
+
+            <div class="mt-4 text-center">
+                <button class="js-calendly-trigger text-sm text-[#c9a84c] hover:text-[#b8973e] transition-colors inline-flex items-center gap-x-1.5">
+                    <span>Or book a strategy conversation directly</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
             
             <div id="form-success" class="hidden mt-6 p-5 bg-emerald-950/40 border border-emerald-900/50 rounded-3xl text-center">
                 <div class="flex justify-center mb-3">
@@ -573,8 +554,7 @@
     <!-- Footer -->
     <footer class="border-t border-white/10 py-8">
         <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row md:items-center justify-between gap-y-4 text-xs text-[#666]">
-            <div>© 2026 Joshua Eze. Sharp thinking, no fluff.  <a href="/sitemap.html">HTML Sitemap</a> </div>
-            
+            <div>© 2026 Joshua Eze. Sharp thinking, no fluff.</div>
             <div class="flex items-center gap-x-5">
                 <a href="#" class="hover:text-white transition-colors">Privacy</a>
                 <div class="w-px h-2.5 bg-white/20"></div>
@@ -582,6 +562,47 @@
             </div>
         </div>
     </footer>
+
+    <!-- Thinking Modal -->
+    <div id="thinking-modal" onclick="hideThinkingModal()" class="hidden fixed inset-0 z-[70] bg-black/90 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="custom-modal bg-[#111] border border-white/10 w-full max-w-3xl rounded-3xl overflow-hidden">
+            
+            <div class="flex items-center justify-between px-8 py-5 border-b border-white/10">
+                <div id="modal-thinking-title" class="font-semibold text-2xl tracking-tight text-white"></div>
+                <button onclick="hideThinkingModal()" class="w-9 h-9 flex items-center justify-center text-[#a3a3a3] hover:text-white hover:bg-white/5 rounded-2xl transition-colors">
+                    <i class="fa-solid fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="p-8">
+                <div id="modal-thinking-image" class="w-full h-64 rounded-2xl overflow-hidden mb-8 bg-[#0a0a0a]"></div>
+                
+                <div class="prose prose-invert max-w-none text-[#e5e5e5]">
+                    <div id="modal-thinking-description" class="text-[15px] leading-relaxed"></div>
+                </div>
+                
+                <div class="mt-8 grid md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="uppercase text-xs tracking-[2px] text-[#c9a84c] mb-3">KEY TAKEAWAYS</div>
+                        <div id="modal-thinking-takeaways" class="text-sm text-[#a3a3a3] space-y-2"></div>
+                    </div>
+                    <div>
+                        <div class="uppercase text-xs tracking-[2px] text-[#c9a84c] mb-3">RELATED PILLAR</div>
+                        <div id="modal-thinking-pillar" class="font-medium text-white"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="px-8 py-6 bg-[#0a0a0a] flex items-center justify-between border-t border-white/10">
+                <div class="text-xs text-[#666]">Published on X • Full thread available</div>
+                <a href="https://x.com/mrjoshuaeze" target="_blank" 
+                   class="inline-flex items-center gap-x-2 px-5 py-2.5 text-sm font-semibold bg-white text-[#0a0a0a] rounded-3xl hover:bg-zinc-100 transition-all">
+                    <span>Read full thread on X</span>
+                    <i class="fa-brands fa-x-twitter text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <script>
         function initializeTailwind() {
@@ -612,6 +633,9 @@
         
         function setupSmoothScroll() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                // Skip Calendly action buttons (they use href="#" but should not trigger scroll)
+                if (anchor.classList.contains('js-calendly-trigger')) return;
+
                 anchor.addEventListener('click', function(e) {
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
@@ -627,6 +651,85 @@
                     }
                 });
             });
+        }
+        
+        const thinkingItems = [
+            {
+                id: 0,
+                title: "Strategy in High-Constraint Environments",
+                description: "Most strategy frameworks assume abundant resources, stable institutions, and predictable markets. They fail when applied in environments where capital is scarce, infrastructure is unreliable, and policy can shift overnight. This framework shows how to design strategy that actually survives real-world African conditions — starting with constraint mapping and building adaptive advantage.",
+                takeaways: [
+                    "Constraint mapping before opportunity mapping",
+                    "Build optionality into every major decision",
+                    "Design for reversibility, not just scalability",
+                    "Turn regulatory and infrastructure gaps into moats"
+                ],
+                pillar: "Business Strategy + Nigerian/African Context"
+            },
+            {
+                id: 1,
+                title: "The African Entrepreneur’s Real Playbook",
+                description: "Imported playbooks from Silicon Valley or Harvard case studies rarely survive first contact with African reality. This piece breaks down why — and offers a grounded alternative built on distribution realities, trust economics, informal networks, and capital constraints that actually exist on the ground.",
+                takeaways: [
+                    "Distribution often beats product in African markets",
+                    "Trust is the real currency — build it before you sell",
+                    "Formal vs informal economy strategies are different games",
+                    "Capital efficiency > capital raising in most cases"
+                ],
+                pillar: "Nigerian/African Context"
+            },
+            {
+                id: 2,
+                title: "What Building on a Skilled Worker Visa Actually Looks Like",
+                description: "The public narrative around moving abroad is usually either overly rosy or overly dramatic. The truth sits in the middle: real constraints on time, energy, and risk-taking that most people don’t talk about. Here’s how I’ve learned to navigate it while still building publicly and strategically.",
+                takeaways: [
+                    "Visa status changes how you allocate risk and time",
+                    "Mental load is higher than people admit",
+                    "You can still build in public — it just requires different boundaries",
+                    "Constraints can force better focus and decision-making"
+                ],
+                pillar: "Personal Journey"
+            },
+            {
+                id: 3,
+                title: "Why Africa’s Biggest Problem Isn’t Capital — It’s Thinking",
+                description: "We talk endlessly about access to capital. But the deeper issue is often how we think about problems, opportunities, and what “success” even looks like. This contrarian take argues that until we upgrade the quality of strategic thinking at individual and institutional levels, more capital won’t solve the structural challenges.",
+                takeaways: [
+                    "Imported mental models often create more problems than they solve",
+                    "Short-termism is cultural and structural — not just a funding issue",
+                    "We need more honest, context-native strategic frameworks",
+                    "Thinking quality compounds faster than capital access"
+                ],
+                pillar: "Policy & Big Thinking"
+            }
+        ];
+        
+        function showThinkingModal(index) {
+            const item = thinkingItems[index];
+            const modal = document.getElementById('thinking-modal');
+            
+            document.getElementById('modal-thinking-title').textContent = item.title;
+            document.getElementById('modal-thinking-description').innerHTML = item.description;
+            
+            const takeawaysContainer = document.getElementById('modal-thinking-takeaways');
+            takeawaysContainer.innerHTML = item.takeaways.map(t => 
+                `<div class="flex items-start gap-x-2"><span class="text-[#c9a84c] mt-1">→</span> <span>${t}</span></div>`
+            ).join('');
+            
+            document.getElementById('modal-thinking-pillar').innerHTML = item.pillar;
+            
+            // Simple placeholder image
+            const imageContainer = document.getElementById('modal-thinking-image');
+            imageContainer.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] flex items-center justify-center"><div class="text-center"><div class="text-[#c9a84c] text-sm tracking-widest mb-1">JOSHUA EZE</div><div class="text-white text-lg font-medium">Strategic Thinking</div></div></div>`;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideThinkingModal() {
+            const modal = document.getElementById('thinking-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
         
         function handleFormSubmit(e) {
@@ -671,12 +774,94 @@
             });
         }
         
+        function setupKeyboardControls() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('thinking-modal');
+                    if (modal.style.display === 'flex') {
+                        hideThinkingModal();
+                    }
+                }
+            });
+        }
+
+        function closeMobileMenuIfOpen() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                if (menuBtn) {
+                    menuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                }
+            }
+        }
+
+        function openCalendly() {
+            console.log('[Calendly] openCalendly() called');
+            const calendlyUrl = 'https://calendly.com/destinyjoshuas/new-meeting';
+
+            // If Calendly is already available (from previous load or static include), use it immediately
+            if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+                try {
+                    closeMobileMenuIfOpen();
+                    window.Calendly.initPopupWidget({ url: calendlyUrl });
+                    return;
+                } catch (e) {
+                    console.warn('[Calendly] initPopupWidget failed, will load dynamically', e);
+                }
+            }
+
+            // Dynamically inject CSS (if not present)
+            const cssUrl = 'https://assets.calendly.com/assets/external/widget.css';
+            if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = cssUrl;
+                document.head.appendChild(link);
+            }
+
+            // Dynamically load the widget JS
+            const script = document.createElement('script');
+            script.src = 'https://assets.calendly.com/assets/external/widget.js';
+            script.async = true;
+
+            script.onload = function () {
+                if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+                    closeMobileMenuIfOpen();
+                    window.Calendly.initPopupWidget({ url: calendlyUrl });
+                } else {
+                    console.warn('[Calendly] Widget not available after script load, opening in new tab');
+                    window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
+                }
+            };
+
+            script.onerror = function () {
+                console.error('[Calendly] Failed to load widget script. Opening Calendly in new tab as fallback.');
+                closeMobileMenuIfOpen();
+                window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
+            };
+
+            document.head.appendChild(script);
+        }
+
         function initializeWebsite() {
             initializeTailwind();
             setupMobileMenu();
             setupSmoothScroll();
             setupScrollAnimations();
-            
+            setupKeyboardControls();
+
+            // Wire up all "Book / Let's talk strategy" CTAs to open Calendly popup
+            const calendlyTriggers = document.querySelectorAll('.js-calendly-trigger');
+            calendlyTriggers.forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    console.log('[Calendly] Trigger clicked:', el.textContent.trim());
+                    openCalendly();
+                });
+            });
+            console.log('[Calendly] Attached listeners to', calendlyTriggers.length, 'book buttons');
+
             // Active nav on scroll
             const navLinks = document.querySelectorAll('nav a[href^="#"]');
             const sections = ['about', 'pillars', 'thinking', 'journey', 'contact'];
