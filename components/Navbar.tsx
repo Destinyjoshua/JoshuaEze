@@ -65,8 +65,9 @@ export default function Navbar() {
               Follow on X
             </a>
             <a
-              href="#contact"
-              className="js-calendly-trigger px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a] cursor-pointer"
+              href="https://calendly.com/destinyjoshuas/new-meeting"
+              target="_blank"
+              className="px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a]"
             >
               {"Let's talk strategy"}
             </a>
