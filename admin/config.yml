@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: Destinyjoshua/JoshuaEze
+  branch: main
+  # For local development you can use the proxy server
+  # But for production we use GitHub OAuth
+
+media_folder: "images/uploads"   # Folder where uploaded images will go
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"          # Used in routes, e.g. /admin/collections/blog
+    label: "Blog Posts"
+    folder: "blog"         # The path to the folder where the documents are stored
+    create: true           # Allow users to create new documents in this collection
+    slug: "{{slug}}"     # Filename template, e.g. title-slug.md
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Framework", value: "FRAMEWORK" }
+          - { label: "African Context", value: "AFRICAN CONTEXT" }
+          - { label: "Personal", value: "PERSONAL" }
+          - { label: "Big Picture", value: "BIG PICTURE" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+# Optional: You can add more collections later (e.g. for pages)
