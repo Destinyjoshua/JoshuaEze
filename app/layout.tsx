@@ -19,6 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Joshua Eze • Business Strategist | @mrjoshuaeze",
   description: "MBA-qualified business strategist helping Africans think bigger about business, money, and building from nothing. Honest. Direct. Practical.",
+  metadataBase: new URL("https://joshua-eze.vercel.app"),
   icons: {
     icon: "/favicon.ico",
   },
