@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Vercel Speed Insights -->
     <script src="/speed-insights.js" defer></script>
+    <!-- Calendly (loaded on-demand when user clicks book button) -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
@@ -150,8 +152,8 @@
                         <i class="fa-brands fa-x-twitter"></i>
                         <span>Follow on X</span>
                     </a>
-                    <a href="#contact" 
-                       class="px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a]">
+                    <a href="#"
+                       class="js-calendly-trigger px-6 py-2.5 bg-[#c9a84c] hover:bg-[#b8973e] transition-all font-semibold text-sm rounded-3xl flex items-center gap-x-2 text-[#0a0a0a] cursor-pointer">
                         <span>Let's talk strategy</span>
                     </a>
                 </div>
@@ -179,7 +181,7 @@
                     <i class="fa-brands fa-x-twitter"></i>
                     <span>Follow on X</span>
                 </a>
-                <a href="#contact" class="flex items-center justify-center gap-x-2 py-3.5 bg-[#c9a84c] text-[#0a0a0a] rounded-3xl text-sm font-semibold">
+                <a href="#" class="js-calendly-trigger flex items-center justify-center gap-x-2 py-3.5 bg-[#c9a84c] text-[#0a0a0a] rounded-3xl text-sm font-semibold cursor-pointer">
                     Let's talk strategy
                 </a>
             </div>
@@ -215,8 +217,8 @@
                         <i class="fa-solid fa-arrow-right-long group-active:translate-x-0.5 transition-transform"></i>
                     </a>
                     
-                    <a href="#contact" 
-                       class="inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 px-8 h-14 rounded-3xl font-semibold text-base transition-colors">
+                    <a href="#"
+                       class="js-calendly-trigger inline-flex items-center justify-center gap-x-3 border border-white/30 hover:bg-white/5 px-8 h-14 rounded-3xl font-semibold text-base transition-colors cursor-pointer">
                         Book a strategy conversation
                     </a>
                 </div>
@@ -516,6 +518,13 @@
                     </button>
                 </div>
             </form>
+
+            <div class="mt-4 text-center">
+                <button class="js-calendly-trigger text-sm text-[#c9a84c] hover:text-[#b8973e] transition-colors inline-flex items-center gap-x-1.5">
+                    <span>Or book a strategy conversation directly</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
             
             <div id="form-success" class="hidden mt-6 p-5 bg-emerald-950/40 border border-emerald-900/50 rounded-3xl text-center">
                 <div class="flex justify-center mb-3">
@@ -621,6 +630,9 @@
         
         function setupSmoothScroll() {
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                // Skip Calendly action buttons (they use href="#" but should not trigger scroll)
+                if (anchor.classList.contains('js-calendly-trigger')) return;
+
                 anchor.addEventListener('click', function(e) {
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
@@ -769,14 +781,84 @@
                 }
             });
         }
-        
+
+        function closeMobileMenuIfOpen() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                if (menuBtn) {
+                    menuBtn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                }
+            }
+        }
+
+        function openCalendly() {
+            console.log('[Calendly] openCalendly() called');
+            const calendlyUrl = 'https://calendly.com/destinyjoshuas/new-meeting';
+
+            // If Calendly is already available (from previous load or static include), use it immediately
+            if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+                try {
+                    closeMobileMenuIfOpen();
+                    window.Calendly.initPopupWidget({ url: calendlyUrl });
+                    return;
+                } catch (e) {
+                    console.warn('[Calendly] initPopupWidget failed, will load dynamically', e);
+                }
+            }
+
+            // Dynamically inject CSS (if not present)
+            const cssUrl = 'https://assets.calendly.com/assets/external/widget.css';
+            if (!document.querySelector('link[href*="calendly.com/assets/external/widget.css"]')) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = cssUrl;
+                document.head.appendChild(link);
+            }
+
+            // Dynamically load the widget JS
+            const script = document.createElement('script');
+            script.src = 'https://assets.calendly.com/assets/external/widget.js';
+            script.async = true;
+
+            script.onload = function () {
+                if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+                    closeMobileMenuIfOpen();
+                    window.Calendly.initPopupWidget({ url: calendlyUrl });
+                } else {
+                    console.warn('[Calendly] Widget not available after script load, opening in new tab');
+                    window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
+                }
+            };
+
+            script.onerror = function () {
+                console.error('[Calendly] Failed to load widget script. Opening Calendly in new tab as fallback.');
+                closeMobileMenuIfOpen();
+                window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
+            };
+
+            document.head.appendChild(script);
+        }
+
         function initializeWebsite() {
             initializeTailwind();
             setupMobileMenu();
             setupSmoothScroll();
             setupScrollAnimations();
             setupKeyboardControls();
-            
+
+            // Wire up all "Book / Let's talk strategy" CTAs to open Calendly popup
+            const calendlyTriggers = document.querySelectorAll('.js-calendly-trigger');
+            calendlyTriggers.forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    console.log('[Calendly] Trigger clicked:', el.textContent.trim());
+                    openCalendly();
+                });
+            });
+            console.log('[Calendly] Attached listeners to', calendlyTriggers.length, 'book buttons');
+
             // Active nav on scroll
             const navLinks = document.querySelectorAll('nav a[href^="#"]');
             const sections = ['about', 'pillars', 'thinking', 'journey', 'contact'];
