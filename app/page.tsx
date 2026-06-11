@@ -4,6 +4,7 @@ import { getAllPosts } from "@/lib/posts";
 import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
+  // Force new Vercel deployment with clean Next.js settings
   const posts = getAllPosts().slice(0, 4); // Featured on home
 
   return (
