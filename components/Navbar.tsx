@@ -47,12 +47,14 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link
-              href="/blog"
-              className={`nav-link font-medium ${isActive("/blog") ? "nav-active" : "text-[#a3a3a3] hover:text-white"}`}
+            <a
+              href="https://blog.joshuaeze.com"
+              className="nav-link font-medium text-[#a3a3a3] hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Blog
-            </Link>
+            </a>
           </div>
 
           {/* Right side actions */}
@@ -98,13 +100,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Link
-              href="/blog"
+            <a
+              href="https://blog.joshuaeze.com"
               onClick={() => setMobileOpen(false)}
               className="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Blog
-            </Link>
+            </a>
 
             <div className="pt-8 flex flex-col gap-y-3">
               <a
