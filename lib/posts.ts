@@ -7,35 +7,48 @@ export type Post = {
   title: string;
   date: string;
   excerpt: string;
-  pillar: string;
-  readingTime: string;
+  category: string;
+  readTime: string;
+  xThreadUrl?: string;
   content: string;
 };
 
 const postsDirectory = path.join(process.cwd(), "content/blog");
 
+function isPublishedPost(fileName: string): boolean {
+  return (
+    fileName.endsWith(".md") &&
+    !fileName.startsWith("_") &&
+    !fileName.startsWith("TEMPLATE")
+  );
+}
+
+function parsePost(fileName: string, fileContents: string): Post {
+  const slug = fileName.replace(/\.md$/, "");
+  const { data, content } = matter(fileContents);
+
+  return {
+    slug,
+    title: data.title,
+    date: data.date,
+    excerpt: data.excerpt,
+    category: data.category || data.pillar || "Business Strategy",
+    readTime: data.readTime || data.readingTime || "5 min",
+    xThreadUrl: data.xThreadUrl || undefined,
+    content,
+  };
+}
+
 export function getAllPosts(): Post[] {
   const fileNames = fs.readdirSync(postsDirectory);
   const posts = fileNames
-    .filter((fileName) => fileName.endsWith(".md"))
+    .filter(isPublishedPost)
     .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, "");
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data, content } = matter(fileContents);
-
-      return {
-        slug,
-        title: data.title,
-        date: data.date,
-        excerpt: data.excerpt,
-        pillar: data.pillar,
-        readingTime: data.readingTime || "5 min",
-        content,
-      } as Post;
+      return parsePost(fileName, fileContents);
     });
 
-  // Sort by date descending
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
@@ -44,15 +57,5 @@ export function getPostBySlug(slug: string): Post | null {
   if (!fs.existsSync(fullPath)) return null;
 
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-
-  return {
-    slug,
-    title: data.title,
-    date: data.date,
-    excerpt: data.excerpt,
-    pillar: data.pillar,
-    readingTime: data.readingTime || "5 min",
-    content,
-  };
+  return parsePost(`${slug}.md`, fileContents);
 }

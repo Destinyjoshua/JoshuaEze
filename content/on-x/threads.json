@@ -1,0 +1,10 @@
+{
+  "threads": [
+    {
+      "url": "https://x.com/mrjoshuaeze/status/REPLACE_WITH_YOUR_THREAD_URL",
+      "title": "Example thread title (replace this)",
+      "date": "2026-06-15",
+      "note": "Optional one-line description of what this thread is about."
+    }
+  ]
+}

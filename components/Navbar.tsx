@@ -17,6 +17,8 @@ export default function Navbar() {
     { href: "/#about", label: "About" },
     { href: "/#pillars", label: "Pillars" },
     { href: "/#thinking", label: "Thinking" },
+    { href: "/blog", label: "Blog" },
+    { href: "/on-x", label: "On X" },
     { href: "/#journey", label: "Journey" },
     { href: "/#contact", label: "Contact" },
   ];
@@ -47,14 +49,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="https://blog.joshuaeze.com"
-              className="nav-link font-medium text-[#a3a3a3] hover:text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Blog
-            </a>
           </div>
 
           {/* Right side actions */}
@@ -100,16 +94,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="https://blog.joshuaeze.com"
-              onClick={() => setMobileOpen(false)}
-              className="mobile-nav-link py-4 px-2 border-b border-white/10 text-[#a3a3a3]"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Blog
-            </a>
-
             <div className="pt-8 flex flex-col gap-y-3">
               <a
                 href="https://x.com/mrjoshuaeze"

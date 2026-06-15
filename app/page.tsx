@@ -170,8 +170,8 @@ export default function Home() {
             >
               <div className="p-6 flex-1">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">{post.pillar.split(" + ")[0].toUpperCase()}</span>
-                  <span className="text-xs text-[#666]">{post.readingTime}</span>
+                  <span className="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">{post.category.split(" + ")[0].toUpperCase()}</span>
+                  <span className="text-xs text-[#666]">{post.readTime}</span>
                 </div>
                 <h3 className="font-semibold text-xl tracking-tight mb-3 group-hover:text-[#c9a84c] transition-colors">{post.title}</h3>
                 <p className="text-[#a3a3a3] text-sm line-clamp-3">{post.excerpt}</p>
