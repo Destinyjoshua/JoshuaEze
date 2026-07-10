@@ -4,6 +4,7 @@ date: "2026-07-10"
 excerpt: "Nigerian social commerce exploded on Instagram and WhatsApp — but trust didn't keep up. Here's why I built TrueSella, and what we're solving."
 category: "Business Strategy + Nigerian / African Context"
 readTime: "6 min"
+image: "/images/Truesella.png"
 ---
 
 Over the past few years, I've watched the way Nigerians buy and sell things change dramatically. Platforms like Instagram and WhatsApp have made it incredibly easy for anyone to start a business. But with this growth came a major problem: **trust**.

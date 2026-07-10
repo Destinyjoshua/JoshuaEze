@@ -9,6 +9,7 @@ export type Post = {
   excerpt: string;
   category: string;
   readTime: string;
+  image?: string;
   xThreadUrl?: string;
   content: string;
 };
@@ -34,6 +35,7 @@ function parsePost(fileName: string, fileContents: string): Post {
     excerpt: data.excerpt,
     category: data.category || data.pillar || "Business Strategy",
     readTime: data.readTime || data.readingTime || "5 min",
+    image: data.image || undefined,
     xThreadUrl: data.xThreadUrl || undefined,
     content,
   };

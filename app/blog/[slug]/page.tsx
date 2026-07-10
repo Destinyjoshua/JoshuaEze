@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const url = `https://joshuaeze.com/blog/${post.slug}`;
+  const image = post.image || "/images/JoshuaEze.JPG";
 
   return {
     title: `${post.title} • Joshua Eze`,
@@ -40,13 +41,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       publishedTime: post.date,
       authors: ["Joshua Eze"],
-      images: [{ url: "/images/JoshuaEze.JPG" }],
+      images: [{ url: image }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: ["/images/JoshuaEze.JPG"],
+      images: [image],
     },
   };
 }
@@ -58,6 +59,11 @@ export default async function BlogPost({ params }: Props) {
   if (!post) {
     notFound();
   }
+
+  const coverImage = post.image || "/images/JoshuaEze.JPG";
+  const coverImageUrl = coverImage.startsWith("http")
+    ? coverImage
+    : `https://joshuaeze.com${coverImage}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -76,7 +82,7 @@ export default async function BlogPost({ params }: Props) {
       url: "https://joshuaeze.com",
     },
     mainEntityOfPage: `https://joshuaeze.com/blog/${post.slug}`,
-    image: "https://joshuaeze.com/images/JoshuaEze.JPG",
+    image: coverImageUrl,
   };
 
   return (
@@ -107,6 +113,17 @@ export default async function BlogPost({ params }: Props) {
         </div>
 
         <h1 className="section-header tracking-tighter text-white mb-6">{post.title}</h1>
+
+        {post.image && (
+          <div className="mb-8 overflow-hidden rounded-3xl border border-white/10 bg-[#111]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-auto object-cover max-h-[480px]"
+            />
+          </div>
+        )}
 
         {post.xThreadUrl && <XThreadCTA url={post.xThreadUrl} variant="top" />}
 

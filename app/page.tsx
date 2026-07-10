@@ -168,6 +168,16 @@ export default function Home() {
               href={`/blog/${post.slug}`}
               className="project-card group cursor-pointer bg-[#111] border border-white/10 rounded-3xl overflow-hidden flex flex-col hover:border-[#c9a84c]/40 transition-colors"
             >
+              {post.image && (
+                <div className="aspect-[16/10] overflow-hidden bg-[#0a0a0a]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                  />
+                </div>
+              )}
               <div className="p-6 flex-1">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">{post.category.split(" + ")[0].toUpperCase()}</span>

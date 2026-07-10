@@ -22,6 +22,16 @@ export default function BlogIndex() {
             href={`/blog/${post.slug}`}
             className="block group border-b border-white/10 pb-8 last:border-none"
           >
+            {post.image && (
+              <div className="mb-4 overflow-hidden rounded-2xl border border-white/10 bg-[#111] aspect-[16/9] max-h-56">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                />
+              </div>
+            )}
             <div className="flex items-center gap-x-3 text-xs mb-2 flex-wrap">
               <span className="px-3 py-1 bg-white/5 rounded-2xl text-[#c9a84c]">{post.category}</span>
               {post.xThreadUrl && (
