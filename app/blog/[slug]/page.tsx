@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -16,6 +17,40 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+
+  if (!post) {
+    return { title: "Post not found" };
+  }
+
+  const url = `https://joshuaeze.com/blog/${post.slug}`;
+
+  return {
+    title: `${post.title} • Joshua Eze`,
+    description: post.excerpt,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url,
+      publishedTime: post.date,
+      authors: ["Joshua Eze"],
+      images: [{ url: "/images/JoshuaEze.JPG" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["/images/JoshuaEze.JPG"],
+    },
+  };
+}
+
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
@@ -24,8 +59,32 @@ export default async function BlogPost({ params }: Props) {
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Joshua Eze",
+      url: "https://joshuaeze.com",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Joshua Eze",
+      url: "https://joshuaeze.com",
+    },
+    mainEntityOfPage: `https://joshuaeze.com/blog/${post.slug}`,
+    image: "https://joshuaeze.com/images/JoshuaEze.JPG",
+  };
+
   return (
     <article className="pt-28 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <TwitterWidgets />
       <div className="max-w-3xl mx-auto px-8">
         <div className="mb-8">
